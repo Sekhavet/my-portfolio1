@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/130e741fad.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <div class="logo" style="font-size: 40px;"><b><span>Sekhavet</span></b></div>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Web Developer/Designer</p>
+                <h1>Hi, I'm <span>Sekhavet</span><br>From Azerbaijan</h1>
+            </div>
+        </div>
+    </div>
+<!-------------- About -------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hi there I'm self-taught frontend developer, mobile and web app designer from Azerbaijan. I have been studying computer science at BSU since 2023. I have designed 2 mobile and 1 professional web application. In 2022, my friends and I participated in the Steam Azerbaijan festival in the hackathon category.</p>
+                    
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    
+                    <div id="skills" class="tab-contents active-tab">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web and Mobile Apps</li>
+                            <li><span>Web Development</span><br>Web Apps/Sites Development</li>
+                            <li><span>App Development</span><br>Building Mobile Apps</li>
+                        </ul>
+                    </div>
+                    
+                    <div id="experience" class="tab-contents">
+                        <ul>
+                            <li><span>2021 - Current</span><br>Freelance</li>                           
+                        </ul>
+                    </div>
+                    
+                    <div id="education" class="tab-contents">
+                        <ul>
+                            <li><span>2023</span><br>Baku State University</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- -------------Services-------------- -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fas fa-code"></i>
+                    <h2>Web Development</h2>
+                    <p>Building responsive web apps.</p>
+                    <a href="#contact">Learn More</a>
+                </div>
+                <div>
+                    <i class="fas fa-crop-alt"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>Designing responsive web and mobile apps.</p>
+                    <a href="#contact">Learn More</a>
+                </div>
+                <div>
+                    <i class="fab fa-app-store"></i>
+                    <h2>App Design</h2>
+                    <p>Building mobile apps.</p>
+                    <a href="#contact">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- -------------Portfolio-------------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title" style="margin-bottom: 40px;">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png">
+                    <div class="layer">
+                        <h3>Flappy Bird - Cristiano</h3>
+                        <p>
+                            I created a flappy bird game with html, css and javascript. The bird is Ronaldo.
+                        </p>
+                        <a href="https://github.com/Sekhavet/cristiano-siu-bird">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2.png">
+                    <div class="layer">
+                        <h3>Netflix Landing Page</h3>
+                        <p>
+                            I created a clone of Netflix's landing page with html, css and javascript.
+                        </p>
+                        <a href="https://github.com/Sekhavet/netflix-landing-page">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- <div class="work">
+                    <img src="images/work-3.png">
+                    <div class="layer">
+                        <h3>Online Shopping App</h3>
+                        <p>
+                            The app connects you to the talented people around the world. Download it from play store.
+                        </p>
+                        <a href="#">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a> -->
+                    </div>
+                </div>
+            </div>
+            <!-- <a href="#" class="btn">See More</a> -->
+        </div>
+    </div>
+<!-- --------------Contact-------------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>sekhavetx7@gmail.com</p>
+                    <p><i class="fa-solid fa-phone-square"></i>+994-070-508-31-12</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/sexavet.emirli.58"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/sekhavettt"><i class="fa-brands fa-instagram"></i></a>
+                        <!-- <a href="#"><i class="fa-brands fa-x-twitter"></i></a> -->
+                    </div>
+                    <!-- <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a> -->
+                </div>
+                <div class="contact-right">
+                    <form id="your-form-id" method="post" action="#">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2 value=" value="Gönder" onclick="submitForm();">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <span style="font-size: 20px;">©</span> <b>Sekhavet</b>
+        </div>
+    </div>
+    <script>
+
+        var tablinks = document.getElementsByClassName('tab-links')
+        var tabcontents = document.getElementsByClassName('tab-contents')
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+    <script>
+        var sidemenu = document.getElementById("sidemenu")
+
+        function openmenu(){
+            sidemenu.style.right = "0"
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px"
+        }
+    </script>
+
+<script>
+    function submitForm() {
+      // Form verilerini toplayın
+      var formData = new FormData(document.getElementById("your-form-id"));
+      const msg = document.getElementById("msg")
+      // AJAX ile formu gönderin
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", "https://script.google.com/macros/s/AKfycby7OF2tP4B2pCMH2Yp_rEga5XKrWkZWa1r2QGEulm6SZdETn17VcUq5O-NpWP8O-fBu/exec", true);
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          // Form gönderildiğinde yapılacak işlemler burada olabilir.
+          // Örneğin, kullanıcıya bir teşekkür mesajı gösterebilirsiniz.
+          console.log("Form başarıyla gönderildi.");
+          msg.innerHTML = "Message sent succesfully!"
+          setTimeout(function(){
+            msg.innerHTML = ""
+          },5000)
+          form.reset
+        }
+      };
+      xhr.send(formData);
+  
+      // Formun sunucuya gitmesini engellemek için aşağıdaki satırı ekleyin
+      event.preventDefault();
+    }
+  </script>
+  
+  
+</body>
+</html>
