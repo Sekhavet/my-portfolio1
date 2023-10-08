@@ -291,6 +291,16 @@ nav ul li a:hover::after {
     background: #008800;
 }
 
+#submit-button:hover {
+    background: #00ff00;
+    border: 1px solid #00ff00;
+}
+
+#submit-button:disabled {
+    background: #262626;
+    border: 1px solid #262626;
+}
+
 /* --------------Contact-------------- */
 
 .contact-left {
