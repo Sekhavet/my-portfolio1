@@ -105,7 +105,7 @@
                     <div class="layer">
                         <h3>Flappy Bird - Cristiano</h3>
                         <p>
-                            I created a flappy bird game with html, css and javascript. The bird is Ronaldo.
+                            I created a flappy bird game with html, css and javascript. The bird is Ronaldo. :D
                         </p>
                         <a href="https://github.com/Sekhavet/cristiano-siu-bird">
                             <i class="fas fa-external-link-alt"></i>
@@ -157,10 +157,10 @@
                 </div>
                 <div class="contact-right">
                     <form id="your-form-id" method="post" action="#">
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <input id='name' type="text" name="Name" placeholder="Your Name" required>
+                        <input id="email" type="email" name="Email" placeholder="Your Email" required>
                         <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn btn2 value=" value="Gönder" onclick="submitForm();">Submit</button>
+                        <button id="submit-button" type="submit" class="btn btn2 value=" value="Gönder" onclick="submitForm();">Submit</button>
                     </form>
                     <span id="msg"></span>
                 </div>
@@ -200,32 +200,41 @@
     </script>
 
 <script>
-    function submitForm() {
-      // Form verilerini toplayın
+    function submitForm(event) {
+      // Form verilerini topla
+      var email = document.getElementById("email").value;
+      var name = document.getElementById("name").value;
       var formData = new FormData(document.getElementById("your-form-id"));
-      const msg = document.getElementById("msg")
-      // AJAX ile formu gönderin
+      const msg = document.getElementById("msg");
+      var submitButton = document.getElementById("submit-button");
+  
+      // E-posta ve isim alanlarının doldurulup doldurulmadığını kontrol et
+      if (email === "" || name === "") {
+        return; // Formu göndermeyi engelle
+      }
+  
+      // Gönderme düğmesini tıklanamaz hale getir
+      submitButton.disabled = true;
+  
+      // AJAX ile formu gönder
       var xhr = new XMLHttpRequest();
       xhr.open("POST", "https://script.google.com/macros/s/AKfycby7OF2tP4B2pCMH2Yp_rEga5XKrWkZWa1r2QGEulm6SZdETn17VcUq5O-NpWP8O-fBu/exec", true);
+      msg.innerHTML = "Message sent successfully!";
       xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
-          // Form gönderildiğinde yapılacak işlemler burada olabilir.
-          // Örneğin, kullanıcıya bir teşekkür mesajı gösterebilirsiniz.
-          console.log("Form başarıyla gönderildi.");
-          msg.innerHTML = "Message sent succesfully!"
           setTimeout(function(){
-            msg.innerHTML = ""
-          },5000)
-          form.reset
+            msg.innerHTML = "";
+            document.getElementById("your-form-id").reset();
+            // Gönderme düğmesini tekrar tıklanabilir hale getir
+            submitButton.disabled = false;
+          }, 2000);
         }
       };
       xhr.send(formData);
   
-      // Formun sunucuya gitmesini engellemek için aşağıdaki satırı ekleyin
+      // Formun sunucuya gitmesini engelle
       event.preventDefault();
     }
   </script>
-  
-  
 </body>
 </html>
