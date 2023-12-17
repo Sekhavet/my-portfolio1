@@ -202,22 +202,18 @@
 
 <script>
     function submitForm(event) {
-      // Form verilerini topla
       var email = document.getElementById("email").value;
       var name = document.getElementById("name").value;
       var formData = new FormData(document.getElementById("your-form-id"));
       const msg = document.getElementById("msg");
       var submitButton = document.getElementById("submit-button");
   
-      // E-posta ve isim alanlarının doldurulup doldurulmadığını kontrol et
       if (email === "" || name === "") {
-        return; // Formu göndermeyi engelle
+        return; 
       }
   
-      // Gönderme düğmesini tıklanamaz hale getir
       submitButton.disabled = true;
   
-      // AJAX ile formu gönder
       var xhr = new XMLHttpRequest();
       xhr.open("POST", "https://script.google.com/macros/s/AKfycby7OF2tP4B2pCMH2Yp_rEga5XKrWkZWa1r2QGEulm6SZdETn17VcUq5O-NpWP8O-fBu/exec", true);
       msg.innerHTML = "Message sent successfully!";
@@ -226,14 +222,12 @@
           setTimeout(function(){
             msg.innerHTML = "";
             document.getElementById("your-form-id").reset();
-            // Gönderme düğmesini tekrar tıklanabilir hale getir
             submitButton.disabled = false;
           }, 2000);
         }
       };
       xhr.send(formData);
   
-      // Formun sunucuya gitmesini engelle
       event.preventDefault();
     }
   </script>
