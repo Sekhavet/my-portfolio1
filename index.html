@@ -195,7 +195,7 @@
                 <div class="contact-right">
                     <form id="your-form-id" method="post" action="#">
                         <input id='name' type="text" name="Name" placeholder="Your Name" required>
-                        <input id="email" type="email" name="Email" placeholder="Your Email" required>
+                        <input id="email" type="email" name="Email" placeholder="Your Email" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$">
                         <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                         <button id="submit-button" type="submit" class="btn btn2 value=" value="Gönder" onclick="submitForm();">Submit</button>
                     </form>
